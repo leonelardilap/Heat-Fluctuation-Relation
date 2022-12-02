@@ -17,3 +17,11 @@ g++ -o simulation micro2cano.cpp
 - microcanonical_states.dat
 - canonical_states.dat
 - transfer_heat.dat
+
+## Python enviroment
+
+To create the python environment used the .yml file to create a conda environment
+
+```bash
+conda env create -f environment.yml
+```
