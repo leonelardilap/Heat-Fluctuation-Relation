@@ -20,7 +20,7 @@ g++ -o simulation micro2cano.cpp
 
 ## Python enviroment
 
-To create the python environment used the .yml file to create a conda environment
+To create the python environment used the .yml file. Write into the console
 
 ```bash
 conda env create -f environment.yml
