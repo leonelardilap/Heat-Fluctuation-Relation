@@ -26,4 +26,5 @@ To create the python environment used the .yml file. Write into the console
 conda env create -f environment.yml
 ```
 
-[//]: # "This is a comment"
+[//]: # "To export the created conda environment into the .yml file, with your conda environment activated, run the following command to generate dependency yaml file"
+[//]: # "conda env export > environment.yml"
