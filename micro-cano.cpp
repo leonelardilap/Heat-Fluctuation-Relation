@@ -24,7 +24,7 @@ class Oscillator
 	private:
 		double X, V, Vh, Vaux, F, k, m;   // Harmonic oscillator
 		double KBT, Gamma, Alpha, dV, RG; // Thermal bath
-
+	
 	public:
 		void   Init(double X0, double V0, double k0, double m0, double KBT0, double Gamma0, double dt);
 		void   Move(Crandom & ran64, double dt);
@@ -42,10 +42,10 @@ void Oscillator::Init(double X0, double V0, double k0, double m0, double KBT0, d
 void Oscillator::Move(Crandom & ran64, double dt){
 	F   = -k*X;
 	Vh += (1.0/m)*F*dt;
-    //Comment the next two lines to get the original leap-frog integrator for the harmonic oscillator
-    RG  =  ran64.gauss(0.0, 1.0); // mu=0.0, sigma=1.0
-    dV  = -Alpha*Vh + sqrt((KBT/m)*(1.0 - Alpha*Alpha))*RG;
-    //dV  = 0.0;
+	//Comment the next two lines to get the original leap-frog integrator for the harmonic oscillator
+	RG  =  ran64.gauss(0.0, 1.0); // mu=0.0, sigma=1.0
+	dV  = -Alpha*Vh + sqrt((KBT/m)*(1.0 - Alpha*Alpha))*RG;
+	//dV  = 0.0;
 	X  +=  (Vh + 0.5*dV)*dt;
 	Vh +=  dV;
 }
@@ -109,7 +109,7 @@ int main(void){
     //Sampling states from a canonical ensemble of Energy Ef (once thermodynamic equilibrium have been reached)
 	ofstream canonical_state("canonical_states.dat");
 	for(i=0; i<N; i++){
-        Canonical_states_energies[i] = Oscillators[i].GetE();
+		Canonical_states_energies[i] = Oscillators[i].GetE();
 		canonical_state << Oscillators[i].GetX() << ", " << Oscillators[i].GetP() << endl;
 	} canonical_state.close();
 
