@@ -45,7 +45,6 @@ void Oscillator::Move(Crandom & ran64, double dt){
 	//Comment the next two lines to get the original leap-frog integrator for the harmonic oscillator
 	RG  =  ran64.gauss(0.0, 1.0); // mu=0.0, sigma=1.0
 	dV  = -Alpha*Vh + sqrt((KBT/m)*Alpha*(2.0 - Alpha))*RG;
-	//dV  = -Alpha*Vh + sqrt((KBT/m)*(1.0 - Alpha*Alpha))*RG;
 	//dV  = 0.0;
 	X  +=  (Vh + 0.5*dV)*dt;
 	Vh +=  dV;
@@ -80,7 +79,7 @@ int main(void){
 	
 	//Thermal bath variables
 	Crandom ran64(0); //Seed-initialized random number generator
-	double KBT0=1.0, Gamma0=log(2.0)/dt;
+	double KBT0=2.0, Gamma0=log(2.0)/dt;
 	
 	//Arrays to save the oscillators energy of the sampled states on the microcanonical and canonical ensemble
 	double *Microcanonical_states_energies, *Canonical_states_energies;
