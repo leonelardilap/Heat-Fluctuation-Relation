@@ -79,7 +79,7 @@ int main(void){
 	
 	//Thermal bath variables
 	Crandom ran64(0); //Seed-initialized random number generator
-	double KBT0=2.0, Gamma0=log(2.0)/dt;
+	double KBT0=4.0, Gamma0=log(2.0)/dt;
 	
 	//Arrays to save the oscillators energy of the sampled states on the microcanonical and canonical ensemble
 	double *Microcanonical_states_energies, *Canonical_states_energies;
