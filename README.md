@@ -1,4 +1,4 @@
-# Heat exchange fluctuation relation
+# Heat exchange fluctuation relation 🔥
 
 Here we introduce the simulation of the transition from a microcanonical to a canonical ensembles in the classical regime. the simulation it's done through molecular dynamics simulations for the microcanonical ensemble of a single harmonic oscillator evolving into a canonical ensemble in presence of a thermal bath.
 
